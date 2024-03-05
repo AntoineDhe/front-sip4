@@ -1,0 +1,49 @@
+{
+	"name": "sk-skeleton-ethers-template",
+	"author": {
+		"name": "Elliott Green",
+		"url": "https://github.com/Elliott-Green"
+	},
+	"license": "MIT License",
+	"version": "1.0.0",
+	"scripts": {
+		"dev": "vite dev --host",
+		"build": "vite build",
+		"preview": "vite preview --host",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+		"lint": "prettier --plugin-search-dir . --check . && eslint .",
+		"format": "prettier --plugin-search-dir . --write .",
+		"docker:build": "docker build -t sk-skeleton-ethers-template-image .",
+		"docker:run": "docker run -d --name sk-skeleton-ethers-template-container -p 5173:5173 sk-skeleton-ethers-template-image",
+		"docker:stop": "docker stop sk-skeleton-ethers-template-container",
+		"docker:remove": "docker rm sk-skeleton-ethers-template-container",
+		"docker:clean": "docker rmi -f sk-skeleton-ethers-template-image"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.5.0",
+		"autoprefixer": "^10.4.14",
+		"eslint": "^8.28.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-svelte": "^2.26.0",
+		"postcss": "^8.4.23",
+		"postcss-load-config": "^4.0.1",
+		"prettier": "^2.8.0",
+		"prettier-plugin-svelte": "^2.8.1",
+		"svelte": "^3.54.0",
+		"svelte-check": "^3.0.1",
+		"svelte-preprocess": "^5.0.3",
+		"tailwindcss": "^3.3.1",
+		"typescript": "^5.0.0",
+		"vite": "^4.3.0"
+	},
+	"type": "module",
+	"dependencies": {
+		"@metamask/etherscan-link": "^2.2.0",
+		"@openzeppelin/contracts": "^4.8.3",
+		"@skeletonlabs/skeleton": "^1.6.1",
+		"ethers": "^6.3.0",
+		"ethers-svelte": "^3.2.0"
+	}
+}
